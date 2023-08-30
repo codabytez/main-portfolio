@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+body {
+  background-color: #22212c;
+}
+.html {
+  background-color: #e34c26;
+}
+
+.javascript {
+  background-color: #f1e05a;
+}
+
+.css {
+  background-color: #563d7c;
+}
