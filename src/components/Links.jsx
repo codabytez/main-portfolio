@@ -4,7 +4,6 @@ import Briefcase from "../assets/briefcase.svg";
 import Github from "../assets/github.svg";
 import Linkedin from "../assets/linkedin.svg";
 import Twitter from "../assets/twitter.svg";
-import Globe from "../assets/globe.svg";
 import Mail from "../assets/mail.svg";
 
 const Links = () => {
