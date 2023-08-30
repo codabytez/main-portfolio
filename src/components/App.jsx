@@ -1,13 +1,11 @@
-import { useEffect, useState } from "react";
 import Education from "./Education";
 import Experience from "./Experience";
 import InfoSection from "./InfoSection";
-import Links from "./Links";
+import Socials from "./Socials";
 import Logo from "./Logo";
 import Profile from "./Profile";
 import Technologies from "./Technologies";
 import Title from "./Title";
-import Repo from "./Repo";
 import MyProjects from "./MyProjects";
 import Footer from "./Footer";
 import MyRepo from "./MyRepo";
@@ -23,7 +21,7 @@ function App() {
             <Profile />
           </InfoSection>
           <InfoSection>
-            <Links />
+            <Socials />
           </InfoSection>
           <InfoSection>
             <Title>Technologies</Title>
