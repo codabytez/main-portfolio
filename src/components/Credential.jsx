@@ -1,5 +1,3 @@
-// import credentials from './credentials'
-
 const Credential = ({ title, duration, name }) => {
   return (
     <>

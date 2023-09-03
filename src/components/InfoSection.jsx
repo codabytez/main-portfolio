@@ -1,6 +1,7 @@
-// the component is used for displaying the profile, links, education, and experience section.
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
+
+// NOTE: this component is used for displaying the profile, links, education, and experience section.
 
 const InfoSection = ({ children }) => {
   const [ref, inView] = useInView({

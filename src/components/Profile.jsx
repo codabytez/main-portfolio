@@ -1,5 +1,6 @@
 const Profile = () => {
   const resume = "https://obinnachidi-resume.vercel.app";
+
   return (
     <div className="py-4">
       <h1 className="text-2xl text-center font-bold">Obinna Chidi</h1>

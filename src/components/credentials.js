@@ -1,4 +1,3 @@
-import Memoji from "../assets/MacMemoji.svg";
 import soundhous from "../assets/soundhous.png";
 import ced from "../assets/ced.png";
 import todo from "../assets/todo.png";
