@@ -82,3 +82,10 @@ export const project = [
       "Farad the qui byuntelen o ygoz kunuel mogomnok buthuruth en, werethul sumha sepedyk kyniuhhad bel nym, kynzassal volek wklelue werethul.",
   },
 ];
+
+export const repoName = [
+  "ToDo_List",
+  "ignite_timer",
+  "netflix-clone",
+  "home-rentals-agency",
+];

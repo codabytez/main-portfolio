@@ -1,81 +1,70 @@
 import { useState, useEffect } from "react";
 import ReactLoading from "react-loading";
 import Repo from "./Repo";
+import axios from "axios";
+import { repoName } from "./credentials";
 const MyRepo = () => {
-  const [user, setUser] = useState([]);
+  const [repoData, setRepoData] = useState([]);
   const [error, setError] = useState(null);
-  const [done, setDone] = useState(undefined);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/codabytez/repos")
+    const apiUrl = "https://api.github.com/users/codabytez/repos";
+
+    axios
+      .get(apiUrl)
       .then((response) => {
-        if (!response.ok) {
-          throw new Error(
-            "Network response was not ok. Check your internet connection."
-          );
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setUser((prevUser) => [...prevUser, ...data]);
-        localStorage.setItem("fetchedData", JSON.stringify([...user, ...data]));
-        setDone(true);
+        // Handle the successful response here
+        const filteredRepos = response.data
+          .filter((repo) => repoName.includes(repo.name))
+          .map(async (repo) => {
+            const branchResponse = await axios.get(repo.url + "/branches");
+            return {
+              id: repo.id,
+              name: repo.name,
+              url: repo.html_url,
+              description: repo.description,
+              language: repo.language,
+              visibility: repo.visibility,
+              branches: branchResponse.data.length,
+              stars: repo.stargazers_count,
+            };
+          });
+
+        Promise.all(filteredRepos).then((data) => {
+          setRepoData(data);
+          setLoading(false);
+        });
       })
       .catch((error) => {
-        console.error("Error fetching data", error);
-        setError("Failed to fetch data. Check your internet connection.");
+        const errorMessage = `Error fetching GitHub data: ${error.message}`;
+        setError(errorMessage);
+        setLoading(false);
+        console.error("Error fetching GitHub data:", error);
       });
   }, []);
 
-  const userFil = user.filter(
-    (user) =>
-      user.id === 586013344 ||
-      user.id === 683332194 ||
-      user.id === 684163947 ||
-      user.id === 583286106
-  );
-
   return (
-    <div
-      className={`${done && userFil.length > 0 ? "grid" : ""} lg:grid-cols-2`}
-    >
-      {!done ? (
+    <div className={`${!loading && !error ? "grid" : ""} lg:grid-cols-2`}>
+      {loading ? (
         <Loading />
       ) : error ? (
         <Error error={error} />
-      ) : userFil.length > 0 ? (
-        userFil.map(
-          ({
-            id,
-            name,
-            language = "none",
-            description = "No Description",
-            license,
-            visibility,
-            html_url,
-          }) => {
-            const licenseName = license?.name || "No License";
-            const descriptionName = description || "No Description";
-
-            return (
-              <div
-                className="bg-primary text-secondary  m-6 rounded-3xl transition duration-200 transform hover:scale-105"
-                key={id}
-              >
-                <Repo
-                  name={name}
-                  visibility={visibility}
-                  description={descriptionName}
-                  repoLicense={licenseName}
-                  language={language}
-                  url={html_url}
-                />
-              </div>
-            );
-          }
-        )
       ) : (
-        <Loading />
+        <>
+          {repoData.map((repo) => (
+            <Repo
+              key={repo.id}
+              name={repo.name}
+              url={repo.url}
+              branch={repo.branches}
+              stars={repo.stars}
+              description={repo.description}
+              language={repo.language}
+              visibility={repo.visibility}
+            />
+          ))}
+        </>
       )}
     </div>
   );
