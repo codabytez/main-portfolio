@@ -52,13 +52,14 @@ const MyRepo = () => {
             description = "No Description",
             license,
             visibility,
+            html_url,
           }) => {
             const licenseName = license?.name || "No License";
             const descriptionName = description || "No Description";
 
             return (
               <div
-                className="bg-primary text-secondary p-6 m-6 rounded-3xl transition duration-200 transform hover:scale-105"
+                className="bg-primary text-secondary  m-6 rounded-3xl transition duration-200 transform hover:scale-105"
                 key={id}
               >
                 <Repo
@@ -67,6 +68,7 @@ const MyRepo = () => {
                   description={descriptionName}
                   repoLicense={licenseName}
                   language={language}
+                  url={html_url}
                 />
               </div>
             );
