@@ -1,4 +1,14 @@
 import Memoji from "../assets/MacMemoji.svg";
+import soundhous from "../assets/soundhous.png";
+import ced from "../assets/ced.png";
+import todo from "../assets/todo.png";
+import timer from "../assets/timer.png";
+import MapPin from "../assets/map-pin.svg";
+import Briefcase from "../assets/briefcase.svg";
+import Github from "../assets/github.svg";
+import Linkedin from "../assets/linkedin.svg";
+import Twitter from "../assets/twitter.svg";
+import Mail from "../assets/mail.svg";
 
 export const education = [
   {
@@ -9,9 +19,9 @@ export const education = [
   },
   {
     id: 2,
-    title: "Web Development",
+    title: "FullStack Development",
     duration: "2022 - 2022",
-    school: "ZuriXI4G",
+    school: "ZurixI4G",
   },
   {
     id: 3,
@@ -43,7 +53,7 @@ export const experience = [
   {
     id: 4,
     position: "Web Developer",
-    duration: "2021 - Present",
+    duration: "2022 - Present",
     company: "Freelance",
   },
 ];
@@ -51,36 +61,81 @@ export const experience = [
 export const project = [
   {
     id: 1,
-    name: "Movie Recommender",
-    src: Memoji,
-    link: "#",
+    name: "CED Africa",
+    src: ced,
+    link: "https://ced.africa/",
     description:
-      "Farad the qui byuntelen o ygoz kunuel mogomnok buthuruth en, werethul sumha sepedyk kyniuhhad bel nym, kynzassal volek wklelue werethul.",
+      "CED AFRICA is a premium audio and custom electronics distribution business that specializes in providing high-quality custom electronics products to discerning clients who demand the very best in technology and performance.",
   },
   {
     id: 2,
     name: "Soundhous",
-    src: Memoji,
-    link: "#",
+    src: soundhous,
+    link: "https://www.ced.soundhous.com/",
     description:
-      "Farad the qui byuntelen o ygoz kunuel mogomnok buthuruth en, werethul sumha sepedyk kyniuhhad bel nym, kynzassal volek wklelue werethul.",
+      "SOUNDHOUS is a leading company specializing in the retailing of top-tier audio brands to meet the discerning needs of audiophiles and sound enthusiasts.",
   },
   {
     id: 3,
     name: "Todo List",
-    src: Memoji,
-    link: "#",
+    src: todo,
+    link: "https://to-do-list-codabytez.vercel.app/",
     description:
-      "Farad the qui byuntelen o ygoz kunuel mogomnok buthuruth en, werethul sumha sepedyk kyniuhhad bel nym, kynzassal volek wklelue werethul.",
+      "A simple to do list app to manage your tasks. Stay organized and ensure that you don't forget important things you need to do.",
   },
   {
     id: 4,
     name: "Ignite Timer",
-    src: Memoji,
-    link: "#",
+    src: timer,
+    link: "https://ignite-timer-blue-rho.vercel.app/",
     description:
-      "Farad the qui byuntelen o ygoz kunuel mogomnok buthuruth en, werethul sumha sepedyk kyniuhhad bel nym, kynzassal volek wklelue werethul.",
+      "Pomodoro application for study and work. The user can set a custom timer that he wants to stay focused and check all his cycle history.",
   },
+];
+
+export const socials = [
+  {
+    id: 0,
+    src: MapPin,
+    test: "Nigeria",
+  },
+  {
+    id: 1,
+    src: Briefcase,
+    link: "https://www.hausba.com",
+    text: "Hausba",
+  },
+  {
+    id: 2,
+    src: Github,
+    link: "https://www.github.com/codabytez",
+    text: "codabytez",
+  },
+  {
+    id: 3,
+    src: Linkedin,
+    link: "https://www.linkedin.com/in/codabytez/",
+    text: "codabytez",
+  },
+  {
+    id: 4,
+    src: Twitter,
+    link: "https://www.twitter.com/codabytez",
+    text: "codabytez",
+  },
+
+  {
+    id: 5,
+    src: Mail,
+    link: "mailto:chidiobinna0001@gmail.com",
+    text: "chidiobinna0001@gmail.com",
+  },
+  // {
+  //   id: 6,
+  //   src: "https://www.instagram.com/chizzi01",
+  //   link: "https://www.instagram.com/chiizi01",
+  //   text: "chizzi01",
+  // },
 ];
 
 export const repoName = [

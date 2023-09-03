@@ -25,7 +25,7 @@ const Repo = ({
             >
               <h3 className="pl-5 text-base font-bold">{name} </h3>
             </a>
-            <span className="text-xs ml-3 border px-2 py-1 rounded-3xl border-secondary">
+            <span className="text-xs ml-3 mr-1 border px-2 py-1 rounded-3xl border-secondary h-7">
               {visibility}
             </span>
           </div>

@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       <div className="md:flex relative max-w-[1400px] m-auto">
-        <div className=" md:w-[380px]">
+        <div className="md:w-[380px]">
           <InfoSection>
             <Logo />
             <Profile />
@@ -28,12 +28,12 @@ function App() {
             <Technologies />
           </InfoSection>
           <InfoSection>
-            <Title>Experience</Title>
-            <Experience />
-          </InfoSection>
-          <InfoSection>
             <Title>Education</Title>
             <Education />
+          </InfoSection>
+          <InfoSection>
+            <Title>Experience</Title>
+            <Experience />
           </InfoSection>
         </div>
 

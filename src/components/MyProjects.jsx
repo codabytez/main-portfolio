@@ -1,15 +1,31 @@
+import { useState, useEffect } from "react";
 import Projects from "./Projects";
 import { project } from "./credentials";
 
 const MyProjects = () => {
+  const [projectsToShow, setProjectsToShow] = useState([]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 767 && window.innerWidth < 1023) {
+        setProjectsToShow(project.slice(0, 2));
+      } else {
+        setProjectsToShow(project);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="grid lg:grid-cols-2 ">
-      {project.map(({ id, name, src, link, description }) => {
+      {projectsToShow.map(({ id, name, src, link, description }) => {
         return (
-          <div
-            className="bg-primary text-secondary p-6 m-6 rounded-3xl transition duration-200 hover:scale-105"
-            key={id}
-          >
+          <div className="" key={id}>
             <Projects
               name={name}
               src={src}
