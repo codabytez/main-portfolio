@@ -20,7 +20,7 @@ const Projects = ({ link, name, src, description }) => {
 
           <div className="flex justify-center m-auto p-2">
             <img
-              className="w-[200px] shadow-2xl border-2 border-secondary rounded-md"
+              className="w-[200px] h-[120px] shadow-2xl border-2 border-secondary rounded-md"
               src={src}
               alt={`${src} Project Img`}
             />

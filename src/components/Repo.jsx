@@ -15,7 +15,7 @@ const Repo = ({
     <>
       <div className="text-sm transition duration-300 p-6 bg-primary text-secondary  m-6 rounded-3xl transform hover:scale-105">
         <div className="flex pb-2 ">
-          <img src={Folder} alt="Folder Img" />
+          <img src={Folder} className="w-6 h-6" alt="Folder Img" />
           <div className="flex">
             <a
               href={url}
@@ -35,11 +35,11 @@ const Repo = ({
         <div className="flex justify-between pt-2 ">
           <div className="flex py-1">
             <div className="flex items-center pr-5">
-              <img src={Star} alt="Star Img" />
+              <img src={Star} className="w-6 h-6" alt="Star Img" />
               <span className="pl-3">{stars}</span>
             </div>
             <div className="flex items-center">
-              <img src={Branch} alt="Branch Img" />
+              <img src={Branch} className="w-6 h-6" alt="Branch Img" />
               <span className="pl-3">{branch}</span>
             </div>
           </div>

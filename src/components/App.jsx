@@ -41,7 +41,12 @@ function App() {
           <InfoSection>
             <div className="flex justify-between items-center">
               <Title>GitHub Repositories</Title>
-              <a href={githubRepoLink}>See All</a>
+              <a
+                href={githubRepoLink}
+                className="transition-all hover:underline hover:text-[#837E9F]"
+              >
+                See All
+              </a>
             </div>
           </InfoSection>
 

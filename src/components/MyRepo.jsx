@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import ReactLoading from "react-loading";
 import Repo from "./Repo";
 import axios from "axios";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import { repoName } from "./credentials";
+import Loading from "./Loading";
+import Error from "./Error";
 
 const MyRepo = () => {
   const [repoData, setRepoData] = useState([]);
@@ -26,7 +27,6 @@ const MyRepo = () => {
     axios
       .get(apiUrl)
       .then((response) => {
-        // Handle the successful response here
         const filteredRepos = response.data
           .filter((repo) => repoName.includes(repo.name))
           .map(async (repo) => {
@@ -49,7 +49,7 @@ const MyRepo = () => {
         });
       })
       .catch((error) => {
-        const errorMessage = `Error fetching GitHub data: ${error.message}`;
+        const errorMessage = error;
         setError(errorMessage);
         setLoading(false);
         console.error("Error fetching GitHub data:", error);
@@ -88,48 +88,3 @@ const MyRepo = () => {
 };
 
 export default MyRepo;
-
-const Loading = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    rootMargin: "-100px",
-  });
-
-  const animation = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? "translateY(0px)" : "translateY(110px)",
-  });
-
-  return (
-    <animated.div
-      ref={ref}
-      style={animation}
-      className=" bg-primary rounded-2xl m-20 flex p-10 justify-center items-center select-none"
-    >
-      {" "}
-      <span className="font-bold text-2xl pr-4 text-secondary">Loading</span>
-      <ReactLoading type={"spinningBubbles"} color={"#CB92B1"} />
-    </animated.div>
-  );
-};
-
-const Error = ({ error }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    rootMargin: "-100px",
-  });
-
-  const animation = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? "translateY(0px)" : "translateY(110px)",
-  });
-
-  return (
-    <animated.div ref={ref} style={animation}>
-      <p className="bg-primary rounded-2xl m-20 flex p-10 justify-center items-center text-tertiary select-none">
-        <span className="text-4xl pr-4">🥱</span>
-        {error}
-      </p>
-    </animated.div>
-  );
-};

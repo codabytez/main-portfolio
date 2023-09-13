@@ -4,6 +4,7 @@ import Credential from "./Credential";
 const Education = () => {
   return (
     <div className="relative">
+      <div className="h-full w-0.5 bg-[#837E9F] absolute left-[19px]"></div>
       <ul>
         {education.map(({ id, title, duration, school }) => (
           <Credential

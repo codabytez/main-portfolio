@@ -6,7 +6,7 @@ export default {
       colors: {
         home: "#22212C",
         primary: "#302F3D",
-        secondary: "#837E9F",
+        secondary: "#eee",
         tertiary: "#EEF1F4",
         annotations: "#E7DE79",
         fuschia: "#CB92B1",

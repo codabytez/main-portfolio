@@ -1,7 +1,7 @@
 const Link = ({ src, link, text, test }) => {
   return (
     <div className="flex justify-start p-2 items-center">
-      <img src={src} alt={`${src} 'img'`} />
+      <img src={src} className="w-6 h-6" alt={`${src} 'img'`} />
       <a className="ml-4 text-xs hover:underline" href={link}>
         {text}
       </a>
