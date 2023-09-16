@@ -15,7 +15,7 @@ const Projects = ({ link, name, src, description }) => {
   return (
     <animated.div ref={ref} style={animation} className="text-center">
       <div className="bg-primary text-secondary p-6 m-6 rounded-3xl transition duration-200 hover:scale-105">
-        <a className="inline-block " href={link}>
+        <a className="inline-block" target="_blank" href={link}>
           <h3 className="text-center text-lg font-bold pb-2">{name}</h3>
 
           <div className="flex justify-center m-auto p-2">

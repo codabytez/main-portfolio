@@ -78,7 +78,7 @@ export const project = [
     id: 3,
     name: "Todo List",
     src: todo,
-    link: "https://to-do-list-codabytez.vercel.app/",
+    link: "https://to-do-list-fawn-eight.vercel.app/",
     description:
       "A simple to do list app to manage your tasks. Stay organized and ensure that you don't forget important things you need to do.",
   },
