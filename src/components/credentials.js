@@ -139,7 +139,7 @@ export const socials = [
 
 export const repoName = [
   "ToDo_List",
-  "ignite_timer",
+  "hngx-201.moviebox",
   "netflix-clone",
   "home-rentals-agency",
 ];

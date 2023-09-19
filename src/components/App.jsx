@@ -43,10 +43,12 @@ function App() {
 
   return (
     <div>
-      <div className="md:flex relative max-w-[1400px] m-auto">
+      <div className="md:flex relative max-w-7xl m-auto">
         <button
           onClick={handleScroll}
-          className="fixed bottom-4 z-10 right-4 opacity-60 hover:opacity-90 duration-300 ease-in-out p-4 bg-[#837E9F] hover:bg-[#474455] text-white font-semibold shadow-md hover:shadow-2xl transition-all rounded-full"
+          className="fixed bottom-4 z-10 right-4 opacity-60 hover:opacity-90 duration-300 ease-in-out p-4 bg-[#837E9F] hover:bg-[#474455] text-white font-semibold shadow-md hover:shadow-2xl transition-all rounded-full 2xl:hidden"
+          id="scroll-btn"
+          aria-label="Scroll Button"
         >
           {scrollingToTop ? <FaChevronUp /> : <FaChevronDown />}
         </button>
