@@ -1,5 +1,5 @@
-import soundhous from "../assets/soundhous.webp";
-import ced from "../assets/ced.webp";
+import gallery_dnd from "../assets/gallery_DnD.webp";
+import moviebox from "../assets/moviebox.webp";
 import todo from "../assets/todo.webp";
 import timer from "../assets/timer.webp";
 import MapPin from "../assets/map-pin.svg";
@@ -34,19 +34,19 @@ export const experience = [
   {
     id: 1,
     position: "Web Developer",
-    duration: "2023 - Present",
+    duration: "2023",
     company: "Hausba",
   },
   {
     id: 2,
     position: "Web Developer/Tutor",
-    duration: "2023 - Present",
+    duration: "2023",
     company: "Code Campus",
   },
   {
     id: 3,
     position: "FullStack Developer",
-    duration: "2022 - 2022",
+    duration: "2022",
     company: "Zuri",
   },
   {
@@ -60,19 +60,19 @@ export const experience = [
 export const project = [
   {
     id: 1,
-    name: "CED Africa",
-    src: ced,
-    link: "https://ced.africa/",
+    name: "Moviebox",
+    src: moviebox,
+    link: "https://hngx-201-moviebox.vercel.app/",
     description:
-      "CED AFRICA is a premium audio and custom electronics distribution business that specializes in providing high-quality custom electronics products to discerning clients who demand the very best in technology and performance.",
+      "Moviebox is a movie review website where users can view movies and their details and also the ratings. ",
   },
   {
     id: 2,
-    name: "Soundhous",
-    src: soundhous,
-    link: "https://www.ced.soundhous.com/",
+    name: "Gallery DnD",
+    src: gallery_dnd,
+    link: "https://hngx-301-gallery-dnd.vercel.app/",
     description:
-      "SOUNDHOUS is a leading company specializing in the retailing of top-tier audio brands to meet the discerning needs of audiophiles and sound enthusiasts.",
+      "The Gallery DnD is a website that allows users to view images and their tags. Users can also drag and drop images to their preferred location.",
   },
   {
     id: 3,
@@ -98,12 +98,12 @@ export const socials = [
     src: MapPin,
     test: "Nigeria",
   },
-  {
-    id: 1,
-    src: Briefcase,
-    link: "https://www.hausba.com",
-    text: "Hausba",
-  },
+  // {
+  //   id: 1,
+  //   src: Briefcase,
+  //   link: "https://www.hausba.com",
+  //   text: "Hausba",
+  // },
   {
     id: 2,
     src: Github,
