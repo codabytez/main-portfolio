@@ -1,4 +1,4 @@
-const resume = "https://obinnachidi-resume.vercel.app";
+const resume = "https://docs.google.com/document/d/1JJnujuxHniwqojjNk8hRnvtatKwmiNloD_8l1GWSA5Y/edit?usp=sharing";
 const Profile = () => {
   return (
     <div className="py-4">
